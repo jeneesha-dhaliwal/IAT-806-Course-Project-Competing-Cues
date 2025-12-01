@@ -212,7 +212,7 @@ function programTexts(){ //Conditionals for when to draw various texts, titles, 
 
 function maxResult(maxIndex){ //used to summarize credibility ratings for the SummaryPost
 	if(maxIndex == 1){
-		return 'a human news source using neutral tone'
+		return 'a human-written news source using neutral tone'
 	}
 	if(maxIndex == 2){
 		return 'an AI source using emotional tone'
@@ -221,7 +221,7 @@ function maxResult(maxIndex){ //used to summarize credibility ratings for the Su
 		return 'an AI source using neutral tone'
 	}
 	if(maxIndex == 4){
-		return 'a human news source using emotional tone'
+		return 'a human-written news source using emotional tone'
 	}
 }
 
