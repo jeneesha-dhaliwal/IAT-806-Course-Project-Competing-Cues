@@ -411,7 +411,7 @@ class AIPost extends Post {
   display() {
     super.display(); // Draw the normal post, as outlined in the post class
 
-	 //Override to add AI-specific look
+	//Override to add AI-specific look
     fill(192);
     ellipse(460, 180, 100, 100);
     fill(255);
