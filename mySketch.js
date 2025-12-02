@@ -338,7 +338,7 @@ function toneButtonInfo(){
 
 
 //Mimicking overloading, stackoverflow source (https://stackoverflow.com/questions/456177/function-overloading-in-javascript-best-practices) said that you can mimic overloading in p5.js using default settings
-// Examples of overloading using the toneInfo function can be seen on lines 315 and 332
+// Examples of overloading using the toneInfo function can be seen on lines 315 and 324
 function toneInfo(infoContent, x = 1150, y = 400){ 
   fill(255);
   textSize(18);
