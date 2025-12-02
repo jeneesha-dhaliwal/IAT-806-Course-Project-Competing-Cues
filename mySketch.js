@@ -2,7 +2,7 @@
 //IAT 806 - Course Project - Competing Cues
 //Interactive buttons and sliders made using CanvasGUI - A p5.js library created by Peter Lager (http://www.lagers.org.uk/canvasgui/index.html)
 
-//declaring variables that will be used in the program
+//Declaring variables that will be used in the program
 let newsEmotionPost; 
 let newsNeutralPost; 
 let aiEmotionPost;
@@ -30,7 +30,7 @@ let neutralContent;
 
 //File Processing, loading emotional and netural content for simulated social media posts using .txt file
 function preload(){
-	content = loadStrings('content.txt');
+  content = loadStrings('content.txt');
 }
 
 
@@ -63,12 +63,12 @@ function setup(){
     .textSize(22)
     .scheme('blue')
     .setAction((info) => {
-      // Save credibility rating
-      credibilityRatings[currentPostIndex] = sliderValue;
-      // Resetting credibility slider
-      gui.$('credibilitySlider').value(0);
-      sliderValue = 0;
-      nextPost = true;
+     // Save credibility rating
+     credibilityRatings[currentPostIndex] = sliderValue;
+     // Resetting credibility slider
+     gui.$('credibilitySlider').value(0);
+     sliderValue = 0;
+     nextPost = true;
     });
 
   //Source button
@@ -161,7 +161,7 @@ function showPost() {
   }
 
   if(currentPostIndex > 9){
-		nextBtn.hide();
+	nextBtn.hide();
   }
 
   // Move to next post when "Next" pressed
@@ -174,13 +174,13 @@ function showPost() {
 
 function programTexts(){ //Conditionals for when to draw various texts, titles, and labels onto the interface
 	if (currentPostIndex >= 6 && currentPostIndex <= 9){
-		 fill(0);
-  textSize(20);
-  textAlign(LEFT);
-	noStroke();
-  text('Learn More:', 10, 500);
+	 fill(0);
+     textSize(20);
+     textAlign(LEFT);
+	 noStroke();
+     text('Learn More:', 10, 500);
 	} if(currentPostIndex >=1 && currentPostIndex <=4) {
-		fill(0);
+	  fill(0);
       textSize(20);
       textAlign(CENTER);
       noStroke();
@@ -191,20 +191,20 @@ function programTexts(){ //Conditionals for when to draw various texts, titles, 
       text('2', 622, 580);
       text('3', 678, 580);
       text('4', 734, 580);
-	   text('5', 789, 580);
-	   text('Least credible', 510, 620, 50, 50);
-	   text('Most credible', 789, 620, 50, 50);
+	  text('5', 789, 580);
+	  text('Least credible', 510, 620, 50, 50);
+	  text('Most credible', 789, 620, 50, 50);
 	} if(currentPostIndex >=0 && currentPostIndex <=4){
-		fill(0);
+	  fill(0);
       textSize(25);
       textAlign(CENTER);
-	   noStroke();
+	  noStroke();
       text('What influences your perception of credibility?', width/2, 50);
 	} if(currentPostIndex >=5 && currentPostIndex <=9){
-		fill(0);
+	  fill(0);
       textSize(25);
       textAlign(CENTER);
-	   noStroke();
+	  noStroke();
       text('Competing Cues: What influences your perception of credibility?', width/2, 50);
 	}
 }
@@ -250,7 +250,7 @@ function sourceButtonInfo(){
 	 strokeWeight(1);
 	 fill(118, 63, 163);
 	 rect(170, 145, 280, 120, 10, 10, 10, 10);
-    sourceInfo('Human-written content tends to activate authority and social presence heuristics, which signal expertise and warmth.');
+     sourceInfo('Human-written content tends to activate authority and social presence heuristics, which signal expertise and warmth.');
 
 	 stroke(0);
 	 strokeWeight(2);
@@ -258,7 +258,7 @@ function sourceButtonInfo(){
 	 strokeWeight(1);
 	 fill(227, 100, 20);
 	 rect(160, 330, 260, 90, 10, 10, 10, 10);
-    sourceInfo('Reflection: Did you notice yourself trusting this post more because it felt human?', 175, 500);
+     sourceInfo('Reflection: Did you notice yourself trusting this post more because it felt human?', 175, 500);
 
     } else if (currentPostIndex == 7 || currentPostIndex == 8) { //Information on an AI Assistant being the source of the post
 		stroke(0);
@@ -267,7 +267,7 @@ function sourceButtonInfo(){
 		strokeWeight(1);
 		fill(118, 63, 163);
 		rect(170, 175, 280, 170, 10, 10, 10, 10);
-      sourceInfo('AI sources can trigger machine heuristics: Some people assume AI is more objective and data-driven, a positive heuristic. Others see AI as rigid or lacking human judgment, a negative heuristic that can reduce trust.');
+        sourceInfo('AI sources can trigger machine heuristics: Some people assume AI is more objective and data-driven, a positive heuristic. Others see AI as rigid or lacking human judgment, a negative heuristic that can reduce trust.');
 
 		stroke(0);
 		strokeWeight(2);
@@ -304,7 +304,7 @@ function toneButtonInfo(){
 		strokeWeight(1);
 		fill(58, 124, 165);
 		rect(1130, 250, 250, 140, 10, 10, 10, 10);
-      toneInfo('News that avoids emotional wording may help people evaluate information more clearly by reducing emotional bias.');
+        toneInfo('News that avoids emotional wording may help people evaluate information more clearly by reducing emotional bias.');
 
 		stroke(0);
 		strokeWeight(2);
@@ -312,7 +312,7 @@ function toneButtonInfo(){
 		strokeWeight(1);
 		fill(227, 100, 20);
 		rect(1145, 430, 280, 100, 10, 10, 10, 10);
-      toneInfo('Reflection: Did the use of neutral tone influence how credible you thought this post was?', 1150, 600);
+        toneInfo('Reflection: Did the use of neutral tone influence how credible you thought this post was?', 1150, 600);
 
     } else if (currentPostIndex == 7 || currentPostIndex == 9) { //Information on the use of emotional tone (high valence & high arousal)
  		stroke(0);
@@ -321,7 +321,7 @@ function toneButtonInfo(){
 		strokeWeight(1);
 		fill(227, 100, 20);
 		rect(1135, 435, 260, 100, 10, 10, 10, 10);
-      toneInfo('Reflection: How do emotional headlines affect your own judgment of credibility?', 1150, 600);
+        toneInfo('Reflection: How do emotional headlines affect your own judgment of credibility?', 1150, 600);
 		
 		
 		strokeWeight(2);
@@ -329,7 +329,7 @@ function toneButtonInfo(){
 		strokeWeight(1);
 		fill(58, 124, 165);
 		rect(1140, 265, 280, 150, 10, 10, 10, 10);
-      toneInfo('When news headlines use strong emotional language, people may be more likely to believe them. This is because emotional reactions can override careful thinking.');
+        toneInfo('When news headlines use strong emotional language, people may be more likely to believe them. This is because emotional reactions can override careful thinking.');
 
 
     }
@@ -338,7 +338,7 @@ function toneButtonInfo(){
 
 
 //Mimicking overloading, stackoverflow source (https://stackoverflow.com/questions/456177/function-overloading-in-javascript-best-practices) said that you can mimic overloading in p5.js using default settings
-// Examples of overloading using the toneInfo function can be seen on lines 263 and 272
+// Examples of overloading using the toneInfo function can be seen on lines 315 and 332
 function toneInfo(infoContent, x = 1150, y = 400){ 
   fill(255);
   textSize(18);
@@ -404,7 +404,7 @@ class Post {
 //AI Post - Subclass of Post - Inheriting from Post Class & Overriding aspects of the display 
 class AIPost extends Post {  
   constructor(postContent) {
-	  // hardcode the AI Assitant's name + handle 
+	// hardcode the AI Assitant's name + handle 
     super("AI News Assistant", "@AI_News_Assistant", postContent, '12:00PM Oct 2 2025');
   }
 
@@ -424,14 +424,14 @@ class AIPost extends Post {
 //Human-Written News Post (called "NewsPost" for short) - Subclass of Post -  Inheriting from Post Class & Overriding
 class NewsPost extends Post {
   constructor(postContent) {
-	  // hardcode the human-written news outlet name + handle
+	// hardcode the human-written news outlet name + handle
     super("People's Daily News", "@Peoples_Daily_News", postContent, '12:00PM Oct 2 2025');
   }
 
   display() {
     super.display(); // Draw the normal post, as outlined in the post class
 
-	  // Override to add News-specific look
+	// Override to add News-specific look
     fill(192);
     ellipse(460, 180, 100, 100);
     fill(255);
@@ -451,12 +451,12 @@ class IntroPost extends Post {
     super.display(); // Draw the normal post, as outlined in the post class
 
 	  // Override to add instructions to teach user how to use this program
-		fill(0);
-		textSize(21);
-		textAlign(CENTER);
-		text('Every day, we encounter countless posts online, some may seem credible, while others may not.', 650, 330, 500, 400);
+	  fill(0);
+	  textSize(21);
+	  textAlign(CENTER);
+	  text('Every day, we encounter countless posts online, some may seem credible, while others may not.', 650, 330, 500, 400);
       text( 'In this activity, you will see four posts. Using the slider, rate how credible each post feels to you on a scale from 0 to 5.', 650, 420, 500, 400);
-		text('Press "Next" to begin!', 650, 540, 500, 400);
+	  text('Press "Next" to begin!', 650, 540, 500, 400);
   }
 }
 
@@ -482,7 +482,7 @@ class SummaryPost extends Post {
 	 textAlign(CENTER);
 	 textStyle(BOLD);
 	 fill(188, 71, 73);
-    text( `You found ${maxResult(maxIndex)} most credible.`, 650, 330, 500, 400);
+     text( `You found ${maxResult(maxIndex)} most credible.`, 650, 330, 500, 400);
 	 textStyle(NORMAL);
 	 fill(0);
 	 text( 'What led to that decision?', 650, 400, 505, 400);
@@ -507,7 +507,7 @@ class EndPost extends Post {
 	 textSize(21);
 	 textAlign(CENTER);
 	 text('You have reached the end of this activity.', 650, 330, 500, 400);
-    text( 'Take a moment to reflect: Which cue do you think influenced your perception of credibility more:', 650, 380, 500, 400);
+     text( 'Take a moment to reflect: Which cue do you think influenced your perception of credibility more:', 650, 380, 500, 400);
 	 textStyle(BOLD);
 	 fill(188, 71, 73);
 	 text( 'Source or Tone?', 650, 450, 500, 400);
