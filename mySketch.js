@@ -92,7 +92,7 @@ function setup(){
     .scheme('blue')
     .setAction(() => toneButton = true);
 
-	//Button to close tone button
+  //Button to close tone button
   toneBtn2 = gui.button('toneBtn2', 110, 530, 50, 40)
     .text('x')
     .textSize(20)
@@ -242,7 +242,7 @@ function sourceButtonInfo(){
     textSize(18);
     textAlign(LEFT);
 
-    // Educational prompts and reflections about source cues
+  // Educational prompts and reflections about source cues
   if (currentPostIndex == 6 || currentPostIndex == 9) { //Information on a human-written news outlet being the source of the post
 	 stroke(0);
 	 strokeWeight(2);
