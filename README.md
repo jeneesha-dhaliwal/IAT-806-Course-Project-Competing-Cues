@@ -1,6 +1,6 @@
 # Competing Cues: How AI Source & Emotional Tone Shape Trust
 Competing Cues is an interactive educational prototype that reveals how source (AI vs human) 
-and tone (emotional vs neutral) compete to influence the perceived credibility of online news, 
+and tone (emotional vs neutral) compete to influence the perceived credibility of online news content, 
 helping users recognize their own heuristic-based judgments.
 
 This project explores how subtle interface cues shape trust in AI-mediated information systems.
