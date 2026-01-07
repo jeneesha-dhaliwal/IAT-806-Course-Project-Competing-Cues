@@ -5,6 +5,9 @@ helping users recognize their own heuristic-based judgments.
 
 This project explores how subtle interface cues shape trust in AI-mediated information systems.
 
+**Role:** UX Designer & Developer  
+**Tools:** JavaScript, p5.js, GitHub Pages
+
 ## Live Demo (GitHub Pages)
 You can run the project here: https://jeneesha-dhaliwal.github.io/IAT-806-Course-Project-Competing-Cues/ 
 
