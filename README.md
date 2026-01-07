@@ -1,4 +1,4 @@
-## 🧠 Competing Cues: How AI Source & Emotional Tone Shape Trust
+## Competing Cues: How AI Source & Emotional Tone Shape Trust
 Competing Cues is an interactive educational prototype that reveals how source (AI vs human) 
 and tone (emotional vs neutral) compete to influence the perceived credibility of online news, 
 helping users recognize their own heuristic-based judgments.
@@ -11,7 +11,7 @@ You can run the project here: https://jeneesha-dhaliwal.github.io/IAT-806-Course
 Note: Opening index.html locally will not load content.txt due to browser security.
 Please use the Live Demo link above.
 
-## 🔁 How It Works
+## How It Works
 
 Users rate the credibility of simulated social media posts that vary by:
 
